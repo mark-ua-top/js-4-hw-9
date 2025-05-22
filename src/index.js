@@ -1,16 +1,24 @@
 const form = document.querySelector("#form");
 const del = document.querySelector("#del");
+const input = document.querySelector(".one");
 
 function addToLocalStorage(userData, key) {
   localStorage.setItem(key, JSON.stringify(userData));
 }
 
 function removeAllFromLocalStorage() {
-  localStorage.clear();
-  PNotify.success({
-    text: "Дані успішно видалено.",
-    delay: 2000,
-  });
+  if (localStorage.length > 0) {
+    localStorage.clear();
+    PNotify.success({
+      text: "Дані успішно видалено.",
+      delay: 2000,
+    });
+  } else {
+    PNotify.info({
+      text: "Немає даних для видалення.",
+      delay: 2000,
+    });
+  }
 }
 
 form.addEventListener("submit", (event) => {
@@ -48,9 +56,11 @@ form.addEventListener("submit", (event) => {
     text: "Дані збережено!",
     delay: 2000,
   });
+  form.reset(); 
 });
 
 del.addEventListener("click", (event) => {
   event.preventDefault();
   removeAllFromLocalStorage();
+  form.reset(); 
 });
