@@ -3,7 +3,7 @@ body {
 }
 
 #form {
-  background-color: rgba(93, 93, 93, 0.247);
+  background-color: #5d5d5d3f;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ body {
 #name {
   padding-top: 20px;
   border: none;
-  color: rgb(217, 215, 215);
+  color: rgb(85, 85, 85);
   background-color: transparent;
   text-align: center;
   font-size: 30px;
@@ -23,7 +23,7 @@ body {
 #lastname {
   height: 50px;
   border: none;
-  color: rgb(217, 215, 215);
+  color: rgb(85, 85, 85);
   background-color: transparent;
   text-align: center;
   font-size: 30px;
@@ -31,7 +31,7 @@ body {
 #phone {
   height: 50px;
   border: none;
-  color: rgb(217, 215, 215);
+  color: rgb(85, 85, 85);
   background-color: transparent;
   text-align: center;
   font-size: 30px;
@@ -39,7 +39,7 @@ body {
 #mail {
   height: 50px;
   border: none;
-  color: rgb(217, 215, 215);
+  color: rgb(85, 85, 85);
   background-color: transparent;
   text-align: center;
   font-size: 30px;
@@ -47,7 +47,7 @@ body {
 #submit {
   height: 50px;
   border: none;
-  color: rgb(217, 215, 215);
+  color: rgb(85, 85, 85);
   background-color: transparent;
   text-align: center;
   font-size: 30px;
@@ -56,7 +56,7 @@ body {
   padding-bottom: 20px;
   height: 50px;
   border: none;
-  color: rgb(217, 215, 215);
+  color: rgb(85, 85, 85);
   background-color: transparent;
   text-align: center;
   font-size: 30px;
@@ -64,4 +64,11 @@ body {
 
 input:focus {
   outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #b6b5b5 inset !important;
+  box-shadow: 0 0 0px 1000px #b6b5b5 inset !important;
+  -webkit-text-fill-color: rgb(85, 85, 85) !important;
+  -webkit-border-radius: 30px;
 }
